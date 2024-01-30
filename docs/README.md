@@ -1,7 +1,7 @@
 <p align="center">
 	<img alt="logo" src="logo.png" width="400">
 </p>
-<h1 align="center" style="margin: 30px 0 30px; font-weight: bold;">xxxxxx v0.0.1</h1>
+<h1 align="center" style="margin: 30px 0 30px; font-weight: bold;">xxxxxx v0.0.2</h1>
 <h5 align="center">专注研发xxx产品，专业提供xxxx解决方案</h5>
 <p align="center" class="badge-box">
 	<a href="https://gitee.com/dromara/sa-token/stargazers"><img src="https://gitee.com/dromara/sa-token/badge/star.svg?theme=gvp"></a>
