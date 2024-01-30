@@ -53,49 +53,6 @@
 	- 优化：将 `SaStrategy` 所有策略声明抽离为单独的函数式接口。
 	- 新增：增加为 StpLogic 单独配置 `SaTokenConfig` 参数的能力。
 	
-- sa-token-sso：
-	- 修复：在 SSO 模式三中 `ticket` 校验地址配错时，会出现 NPE 的问题 
-	- 新增：新增 `getData` 接口配置，在模式三拉取数据时可以传递任意参数。 **[重要]** 
-	- 重构：模式三秘钥配置更改：`sa-token.sso.secretkey=xxx` -> `sa-token.sign.secret-key=xxx`。 **[不向下兼容]**
-	- 重构：模式三校验签名方法更改：`SaSsoUtil.checkSign(req)` -> `SaSignUtil.checkRequest(req)`。 **[不向下兼容]**
-	- 新增：新增 `sa-token.sso.mode` 配置项，用于约定此系统使用的 SSO 模式。
-	- 优化：优化校验 ticket 的逻辑。
-	
-- sa-token-jwt：
-	- 修复：jwt 令牌的签名类型可以被篡改的问题。 **[重要]** 
-	
-- 其它：
-	- 优化：所有模块优化注释，更方便开发者阅读源码。
-	- 优化：在所有 .java 文件中添加 license 头说明。
-	- 优化：修复大部分代码警告。
-	- 新增：新增 thymeleaf 标签方言命名空间，增强 ide 代码提示。 **[重要]** 
-	- 新增：定义 `sa-token-bom` 包，方便引入 sa-token 时对齐版本。
-	- 新增：sa-token-dubbo3 插件新增代码示例。
-	- 新增：新增跨域文章和示例：Header 参数版和第三方 Cookie 版。 **[重要]** 
-	- 修复：修复 `sa-token-alone-redis` 在低版本 springboot 下无法启动成功(缺少 `username` 属性)的问题。
-	
-- 新增插件：
-	- 新增：新增 `sa-token-context-dubbo3` 插件。 感谢 `@qiudaozhang` 提交的 pr。 **[重要]** 
-
-- 文档：
-	- 新增：部分常见报错排查。
-	- 新增：首页图片增加懒加载效果，节省流量。
-	- 新增：增加 Cookie 配置示例。
-	- 修复：整理 demo 结构目录结构，修复不正确的路径说明。
-	- 新增：新增 api-sign 模块文档。  **[重要]**  
-	
-- 简化包名  **[重要]**  **[不向下兼容]** 
-	- `sa-token-dao-redis` -> `sa-token-redis`
-	- `sa-token-dao-redis-jackson` -> `sa-token-redis-jackson`。
-	- `sa-token-dao-redis-fastjson` -> `sa-token-redis-fastjson`。
-	- `sa-token-dao-redis-fastjson2` -> `sa-token-redis-fastjson2`。
-	- `sa-token-dao-redisson-jackson` -> `sa-token-redisson-jackson`。
-	- `sa-token-dao-redisx` -> `sa-token-redisx`。
-	- `sa-token-context-dubbo` -> `sa-token-dubbo`。
-	- `sa-token-context-dubbo3` -> `sa-token-dubbo3`。
-	- `sa-token-context-grpc` -> `sa-token-grpc`。
-
-
 ### v1.34.0 @2023-1-11
 
 新增插件：
@@ -552,7 +509,6 @@ sa-token-sso 单点登录：
 - 新增：`StpUtil.getTokenInfo()`改为对象形式，新增部分常用字段 
 - 优化：解决在无cookie模式下，不集成redis时会话无法主动过期的问题 
 - 修复：修复文档首页样式问题 
-
 
 ### v1.6.0 @2020-12-17
 - 新增：花式token生成方案 **[重要]** 

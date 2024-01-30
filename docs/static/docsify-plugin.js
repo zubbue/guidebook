@@ -59,9 +59,6 @@ var myDocsifyPlugin = function(hook, vm) {
 		if($('.zanzhu-count').length && $('.zanzhu-box table').length) {
 			$('.zanzhu-count').html($('.zanzhu-box table tr').length);
 		}
-		
-		// 功能6：标题下面的广告 
-		
 	});
 	
 	// 钩子函数：初始化并第一次加载完成数据后调用，没有参数。
